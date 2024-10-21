@@ -1,0 +1,232 @@
+.nav-main {
+    width: 100vw;
+    height: auto;
+    position: fixed;
+    z-index: 1000;
+
+}
+
+.off-screen-menu{
+    background-color: #0a0a23;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 450px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: 1s ease;
+    z-index: 100;
+    color: white;
+    font-size: 14px;
+    gap: 20px;
+    padding: 50px 0;
+}
+
+.off-screen-menu > ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    gap: 30px;
+}
+.off-screen-menu > ul > li > a{
+    text-decoration: none;
+    color: white;
+    border-left: 1px solid red;
+    padding-left: 5px;
+}
+
+.off-screen-menu.active{
+    left: 0;
+    display: flex;
+}
+
+.hamburger.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+ 
+}
+
+.hamburger.active span:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+.nav-top {
+    width: 100vw;
+    height: 100px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+
+}
+
+.active {
+    color: red;
+}
+
+.nav-bottom {
+    width: 100vw;
+    height: 30px;
+    background-color: #0a0a23;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 5px 0;
+}
+
+.nav-bottom > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.nav-bottom > ul > li > a {
+    color: white;
+    text-decoration: none;
+    transition: 1s ease;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.nav-bottom > ul > li a:hover {
+    color: red;
+}
+
+.nav-top-logo {
+    height: 75px;
+    width: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav-top-logo:hover {
+    cursor: pointer;
+}
+
+.nav-top-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav-top-ul > li > a {
+    text-decoration: none;
+    color: #2e2e2e;
+    font-size: 16px;
+    transition: 0.5s ease;
+}
+
+.nav-top-ul > li > a:hover {
+    color: red;
+}
+
+.nav-top-links {
+    margin-right: 100px;
+}
+
+.nav-upper {
+    background-color: #f1f1f1;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding-left: 100px;
+    align-items: center;
+}
+
+.nav-upper-c1{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-upper-c1 > a{
+    color: #0a0a23;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: black; /* Change as needed */
+    margin: 2px 0;
+    transition: 0.3s;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 900px) {
+    .nav-upper {
+        display: none;
+    }
+
+    .nav-bottom {
+        display: none;
+    }
+
+    .nav-top{
+        display: flex;
+        padding: 0;
+    }
+
+    .nav-top-logo {
+        width: 450px;
+        height: 100px;
+        background-size: contain;
+    }
+
+
+
+    .nav-top-ul {
+        display: none; /* Hide the navigation links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 100px; /* Position below the navbar */
+        left: 0;
+        right: 0;
+        background-color: #ffffff; /* Background color for dropdown */
+        z-index: 1001; /* Ensure it's above other elements */
+    }
+
+    .nav-top-links.active {
+        display: flex; /* Show links when the menu is active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon on mobile */
+        padding: 10px;
+        height: auto;
+        margin-right: -50px;
+    }
+}

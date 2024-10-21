@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+:root{
+    --primary-color: #0a0a23;
+    --secondary-color: rgb(199, 199, 199);
+    --gray: #2e2e2e;
+    --white: #ffffff;
+}
+
+.section-1{
+    height: 400px;
+    width: 100vw;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    z-index: -1;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 150px;
+
+}
+.section-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a23d8; /* Change color and opacity as needed */
+    z-index: 1  ;
+}
+
+.s1-h1{
+    position: relative;
+    color: white;
+    z-index: 100;
+    font-size: 60px;
+    margin-left: 100px;
+}
+
+.s1-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+.s1-ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-left: 200px;
+    position: relative;
+    z-index: 1000;
+}
+
+.s1-ul > li{
+    position: relative;
+    z-index: 1000;
+}
+
+.s1-ul > li > a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    z-index: 1000;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.s1-ul > li > a:hover{
+    background-color: rgb(201, 201, 201);
+    cursor: pointer;
+}
+
+@media screen and (max-width:900px) {
+    .section-1{
+        margin-top: 100px;
+    }
+
+    .s1-container{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .s1-h1{
+        text-align: center;
+        font-size: 30px;
+        margin-left: 0;
+
+    }
+
+    .s1-ul{
+        margin-left: 0;
+    }
+}
